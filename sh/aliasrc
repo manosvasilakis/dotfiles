@@ -18,7 +18,11 @@ alias \
 
 # Colorize commands when possible
 alias \
-	ls="ls -hN --color=auto --group-directories-first -1v" \
+	ls="exa -l --color=always --group-directories-first" \
+	la="exa -al --color=always --group-directories-first" \
+	l.="exa -a | egrep \"^\.\"" \
+	l="ls" \
+	tree="exa -aT --color=always --group-directories-first" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi"
@@ -34,15 +38,13 @@ alias \
 	z="zathura" \
 	e="neomutt" \
 	E="mw -Y && e" \
-	l="ls" \
-	la="ls -allh" \
 	r="ranger" \
 	g="git" \
 	s="sxiv" \
 	S="sudo" \
 	mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4" \
 	mp3="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 5" \
-	nazi="cd ~/.local/src/nazicode && l" \
+	nazi="cd ~/.local/src/nazicode/dwm && l" \
 	opa="cd /home/manos/work/ΟΠΑ/ΜΑΘΗΜΑΤΑ"
 
 # Add settings to programs
