@@ -47,8 +47,8 @@ alias \
 	p="pacman"\
 	sp="sudo pacman"\
 	checkcache="sudo ls /var/cache/pacman/pkg/"\
-	countcachedpacs="sudo ls /var/cache/pacman/pkg/ | wc -l"\
-	sizeofcachedpacs="sudo du -sh /var/cache/pacman/pkg/"\
+	checkcachecount="sudo ls /var/cache/pacman/pkg/ | wc -l"\
+	checkcachedisksize="sudo du -sh /var/cache/pacman/pkg/"\
 	cleancache="sudo pacman -Scc"\
 
 # Hard to type or just to long to type commands
