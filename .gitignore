@@ -26,3 +26,4 @@ wget/
 sh/history
 x11/Xresources-themes
 x11/Xresources-themes.zip
+zsh/.zcompdump
