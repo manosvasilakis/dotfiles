@@ -42,6 +42,15 @@ alias \
 	tag="git tag"\
 	newtag="git tag -a"
 
+# Pacman Commands
+alias \
+	p="pacman"\
+	sp="sudo pacman"\
+	checkcache="sudo ls /var/cache/pacman/pkg/"\
+	countcachedpacs="sudo ls /var/cache/pacman/pkg/ | wc -l"\
+	sizeofcachedpacs="sudo du -sh /var/cache/pacman/pkg/"\
+	cleancache="sudo pacman -Scc"\
+
 # Hard to type or just to long to type commands
 alias \
 	ka="killall"\
@@ -49,7 +58,6 @@ alias \
 	sdn="sudo shutdown -h now"\
 	reboot="sudo reboot"\
 	f="$FILE"\
-	p="sudo pacman"\
 	z="zathura"\
 	e="neomutt"\
 	E="mw -Y && e"\
