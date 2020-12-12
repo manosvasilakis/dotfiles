@@ -60,7 +60,7 @@ alias \
 	mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"\
 	mp3="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 5"\
 	nazi="cd ~/.local/src/nazicode/dwm && l"\
-	opa="cd /home/manos/work/ΟΠΑ/ΜΑΘΗΜΑΤΑ"
+	opa="cd /home/manos/hell/ΟΠΑ/ΜΑΘΗΜΑΤΑ"
 
 # Add settings to programs
 alias abook="abook -C\"$XDG_CONFIG_HOME\"/abook/abookrc --datafile\"$XDG_DATA_HOME\"/abook/addressbook"
