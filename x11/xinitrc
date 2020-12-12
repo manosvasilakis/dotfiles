@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# xinitrc runs automatically when you startx.
+
+# .xprofile functionallity is built in the dwm binary.
+
+# exec dbus-launch --sh-syntax --exit-with-session dwm # runit
+
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
+
+exec dwm >> /home/manos/.local/logs/dwm.log

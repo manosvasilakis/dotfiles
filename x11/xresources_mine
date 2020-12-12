@@ -1,0 +1,42 @@
+/* dwm */
+dwm.normbgcolor: color0
+dwm.normbordercolor: color0
+dwm.normfgcolor: color4
+dwm.selbgcolor: color4
+dwm.selbordercolor: color8
+dwm.selfgcolor: color0
+
+/* URxvt */
+URxvt.font: xft:FantasqueSansMono Nerd Font Mono:size=10
+URxvt.scrollBar: false
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.urgentOnBell: true
+URxvt.iso14755: false
+URxvt.intensityStyles: false
+URxvt.background: [70]#000000
+URxvt.depth: 32
+URxvt.termName: asjkdak
+URxvt.color0:  color0
+URxvt.color1:  color1
+URxvt.color2:  color2
+URxvt.color3:  color3
+URxvt.color4:  color4
+URxvt.color5:  color5
+URxvt.color6:  color6
+URxvt.color7:  color7
+URxvt.color8:  color8
+URxvt.color9:  color9
+URxvt.color10: color10
+URxvt.color11: color11
+URxvt.color12: color12
+URxvt.color13: color13
+URxvt.color14: color14
+URxvt.color15: color15
+
+/* !! Transparency (0-1): */
+*.alpha: 0.8
+/* !! Set a default font and font size as below: */
+*.font: FantasqueSansMono Nerd Font Mono:size=10

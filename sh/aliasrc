@@ -1,0 +1,53 @@
+#!/bin/sh
+
+# use neovim instead of vi and vim
+alias \
+	v="nvim" \
+	vi="nvim" \
+	vim="nvim" \
+	vimdiff="nvim -d"
+
+# Verbosity settings for main utilities
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	mkd="mkdir -pv" \
+	yt="youtube-dl --add-metadata -i" \
+	ffmpeg="ffmpeg -hide_banner"
+
+# Colorize commands when possible
+alias \
+	ls="ls -hN --color=auto --group-directories-first -1v" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi"
+
+# Hard to type or just to long to type commands
+alias \
+	ka="killall" \
+	g="git" \
+	sdn="sudo shutdown -h now" \
+	reboot="sudo reboot" \
+	f="$FILE" \
+	p="sudo pacman" \
+	z="zathura" \
+	e="neomutt" \
+	E="mw -Y && e" \
+	l="ls" \
+	la="ls -allh" \
+	r="ranger" \
+	g="git" \
+	s="sxiv" \
+	S="sudo" \
+	mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4" \
+	mp3="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 5" \
+	nazi="cd ~/.local/src/nazicode && l" \
+	opa="cd /home/manos/work/ΟΠΑ/ΜΑΘΗΜΑΤΑ"
+
+# Add settings to programs
+alias abook="abook -C \"$XDG_CONFIG_HOME\"/abook/abookrc --datafile \"$XDG_DATA_HOME\"/abook/addressbook"
+
+# Helper Functions
+ss() { find ~/.local ~/.config | fzf | xargs -r $EDITOR ; }
+vf() { fzf | xargs -r -I % $EDITOR % ; }
