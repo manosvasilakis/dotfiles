@@ -1,54 +1,69 @@
 #!/bin/sh
 
 # use neovim instead of vi and vim
-alias \
-	v="nvim" \
-	vi="nvim" \
-	vim="nvim" \
+alias\
+	v="nvim"\
+	vi="nvim"\
+	vim="nvim"\
 	vimdiff="nvim -d"
 
 # Verbosity settings for main utilities
-alias \
-	cp="cp -iv" \
-	mv="mv -iv" \
-	rm="rm -vI" \
-	mkd="mkdir -pv" \
-	yt="youtube-dl --add-metadata -i" \
+alias\
+	cp="cp -iv"\
+	mv="mv -iv"\
+	rm="rm -vI"\
+	mkd="mkdir -pv"\
+	yt="youtube-dl --add-metadata -i"\
 	ffmpeg="ffmpeg -hide_banner"
 
 # Colorize commands when possible
-alias \
-	ls="exa -l --color=always --group-directories-first" \
-	la="exa -al --color=always --group-directories-first" \
-	l.="exa -a | egrep \"^\.\"" \
-	l="ls" \
-	tree="exa -aT --color=always --group-directories-first" \
-	grep="grep --color=auto" \
-	diff="diff --color=auto" \
+alias\
+	ls="exa -l --color=always --group-directories-first"\
+	la="exa -al --color=always --group-directories-first"\
+	l.="exa -a | egrep\"^\.\""\
+	l="ls"\
+	tree="exa -aT --color=always --group-directories-first"\
+	grep="grep --color=auto"\
+	diff="diff --color=auto"\
 	ccat="highlight --out-format=ansi"
+
+# Git Commands
+alias \
+	addup="git add -u"\
+	addall="git add ."\
+	branch="git branch"\
+	checkout="git checkout"\
+	clone="git clone"\
+	commit="git commit"\
+	fetch="git fetch"\
+	pull="git pull origin"\
+	push="git push origin"\
+	status="git status"\
+	tag="git tag"\
+	newtag="git tag -a"
 
 # Hard to type or just to long to type commands
 alias \
-	ka="killall" \
-	g="git" \
-	sdn="sudo shutdown -h now" \
-	reboot="sudo reboot" \
-	f="$FILE" \
-	p="sudo pacman" \
-	z="zathura" \
-	e="neomutt" \
-	E="mw -Y && e" \
-	r="ranger" \
-	g="git" \
-	s="sxiv" \
-	S="sudo" \
-	mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4" \
-	mp3="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 5" \
-	nazi="cd ~/.local/src/nazicode/dwm && l" \
+	ka="killall"\
+	g="git"\
+	sdn="sudo shutdown -h now"\
+	reboot="sudo reboot"\
+	f="$FILE"\
+	p="sudo pacman"\
+	z="zathura"\
+	e="neomutt"\
+	E="mw -Y && e"\
+	f="ranger"\
+	g="git"\
+	s="sxiv"\
+	S="sudo"\
+	mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"\
+	mp3="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 5"\
+	nazi="cd ~/.local/src/nazicode/dwm && l"\
 	opa="cd /home/manos/work/ΟΠΑ/ΜΑΘΗΜΑΤΑ"
 
 # Add settings to programs
-alias abook="abook -C \"$XDG_CONFIG_HOME\"/abook/abookrc --datafile \"$XDG_DATA_HOME\"/abook/addressbook"
+alias abook="abook -C\"$XDG_CONFIG_HOME\"/abook/abookrc --datafile\"$XDG_DATA_HOME\"/abook/addressbook"
 
 # Helper Functions
 ss() { find ~/.local ~/.config | fzf | xargs -r $EDITOR ; }
