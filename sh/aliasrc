@@ -29,6 +29,7 @@ alias\
 
 # Git Commands
 alias \
+	init="echo '#' >> README.md && git init && git add ."\
 	addup="git add -u"\
 	addall="git add ."\
 	branch="git branch"\
@@ -49,7 +50,7 @@ alias \
 	checkcache="sudo ls /var/cache/pacman/pkg/"\
 	checkcachecount="sudo ls /var/cache/pacman/pkg/ | wc -l"\
 	checkcachedisksize="sudo du -sh /var/cache/pacman/pkg/"\
-	cleancache="sudo pacman -Scc"\
+	cleancache="sudo pacman -Scc"
 
 # Hard to type or just to long to type commands
 alias \

@@ -1,9 +1,18 @@
-# Don't print a new line at the start of the prompt
-add_newline = false
-# Replace the "❯" symbol in the prompt with "➜"
-[character]                            # The name of the module we are configuring is "character"
-success_symbol = "[➜ ](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+add_newline = false # Don't print a new line at the start of the prompt
 
-# Disable the package module, hiding it from the prompt completely
-# [package]
-# disabled = true
+[character]
+success_symbol = "[➜ ](bold green)"
+error_symbol = "[✗](bold red)"
+use_symbol_for_status = true
+
+[battery]
+disabled = true
+
+# [memory_usage]
+# disabled = false
+# show_percentage = true
+# show_swap = true
+# threshold = -1
+# symbol = " "
+# separator = "/"
+# style = "bold dimmed green"
