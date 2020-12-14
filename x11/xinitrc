@@ -10,6 +10,6 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 
 while true
-	do
-	/usr/bin/dwm 2> /home/manos/.local/logs/dwm.log
+do
+	dwm 2> /home/manos/.local/logs/dwm.log
 done

@@ -35,7 +35,7 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 
 # Other program settings:
-export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
+export SUDO_ASKPASS="$HOME/.local/bin/dmenuaskpass"
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
 export LESS=-R
 
