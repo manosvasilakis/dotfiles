@@ -3,12 +3,12 @@
 # profile file, runs on login. Env vars are set here.
 
 # Add ~/.local/bin to $PATH
-export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':')"
+export PATH="$PATH:/home/manos/.local/bin:/home/manos/.local/bin/scripts:/home/manos/.local/bin/scripts/statusbar:/opt/lampp:/opt/lampp/bin/"
 
 # Default Programs:
 export EDITOR="nvim"
 export TERMINAL="st"
-export BROWSER="firefox"
+export BROWSER="brave"
 
 # ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -23,7 +23,7 @@ export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/sh/inputrc"
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 export GOPATH="$HOME/.local/src/golang"
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
-export DBUS_SESSION_BUS_ADDRESS='unix:abstract=/tmp/dbus-a7hUEojAOw,guid=b068e6cf65b1d28da033e46f5fbc0ce7'
+# export DBUS_SESSION_BUS_ADDRESS='unix:abstract=/tmp/dbus-a7hUEojAOw,guid=b068e6cf65b1d28da033e46f5fbc0ce7'
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
 export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/notmuchrc"
@@ -33,6 +33,7 @@ export MBSYNCRC="$XDG_CONFIG_HOME/mbsync/mbsyncrc"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonstartup"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Other program settings:
 export SUDO_ASKPASS="$HOME/.local/bin/scripts/dmenuaskpass"

@@ -50,7 +50,8 @@ alias \
 	checkcache="sudo ls /var/cache/pacman/pkg/"\
 	checkcachecount="sudo ls /var/cache/pacman/pkg/ | wc -l"\
 	checkcachedisksize="sudo du -sh /var/cache/pacman/pkg/"\
-	cleancache="sudo pacman -Scc"
+	cleancache="sudo pacman -Scc"\
+	cleanorphans="sudo pacman -Qtdq | sudo pacman -Rns -"
 
 # Hard to type or just to long to type commands
 alias \
@@ -68,8 +69,11 @@ alias \
 	S="sudo"\
 	mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"\
 	mp3="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 5"\
+	htdocs="cd /opt/lampp/htdocs && ls"\
 	nazi="cd ~/.local/src/nazicode/dwm && l"\
-	opa="cd /home/manos/hell/ΟΠΑ/ΜΑΘΗΜΑΤΑ"
+	opa="cd /home/manos/hell/ΟΠΑ/ΜΑΘΗΜΑΤΑ && l"\
+	opap="cd /opt/lampp/htdocs/www/opap && l"\
+	updategrubconfig="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # Add settings to programs
 alias abook="abook -C\"$XDG_CONFIG_HOME\"/abook/abookrc --datafile\"$XDG_DATA_HOME\"/abook/addressbook"
