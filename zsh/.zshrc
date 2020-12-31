@@ -2,14 +2,30 @@
 
 # Colors & Prompt
 autoload -U colors && colors 	# Load colors
-# PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 setopt autocd 			# autocd into dirs
-setopt interactive_comments
+setopt interactive_comments     # allow comments in interactive mode
+setopt magicequalsubst          # enable filename expansion fron args 'anything=expression'
+setopt nonomatch                # hide error message if the is no match for pattern
+setopt notify                   # repoty the status of background jobs immediately
+setopt numericglobsort          # sort filename numerically when it makes sence
+setopt promptsubst              # enable command substitution in prompt
+setopt correct                  # auto correct mistakes
 
 # History
-HISTSIZE=10000000
-SAVEHIST=10000000
 HISTFILE=~/.config/sh/history
+HISTSIZE=1000000
+SAVEHIST=1000000
+setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt hist_ignore_dups       # ignore duplicated commands history list
+setopt hist_ignore_space      # ignore commands that start with space
+setopt hist_verify            # show command with history expansion to user before running it
+#setopt share_history         # share command history data
+alias history="history 0"     # force zsh to show the complete history
+
+# enable auto-suggestions based on the history
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# change suggestion color
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 
 # Aliases
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/sh/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/sh/aliasrc"
@@ -19,7 +35,7 @@ autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
-_comp_options+=(globdots) 	# Include hiddens
+_comp_options+=(globdots)     # Include hiddens
 
 # vi mode
 bindkey -v
@@ -54,11 +70,8 @@ echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 bindkey -s '^a' 'bc -lq\n'
-
 bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
-
 bindkey '^[[P' delete-char
-
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
@@ -92,8 +105,9 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 	add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
 fi
 
-# Starship prompt is it bloat? willsee...
+# Starship prompt
 eval "$(starship init zsh)"
+# PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null

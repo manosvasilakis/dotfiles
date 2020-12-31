@@ -73,7 +73,8 @@ alias \
 	nazi="cd ~/.local/src/nazicode/dwm && l"\
 	opa="cd /home/manos/hell/ΟΠΑ/ΜΑΘΗΜΑΤΑ && l"\
 	opap="cd /opt/lampp/htdocs/www/opap && l"\
-	updategrubconfig="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+	updategrubconfig="sudo grub-mkconfig -o /boot/grub/grub.cfg"\
+	refreshdwmblocks="killall -q dwmblocks;setsid dwmblocks &"
 
 # Add settings to programs
 alias abook="abook -C\"$XDG_CONFIG_HOME\"/abook/abookrc --datafile\"$XDG_DATA_HOME\"/abook/addressbook"
