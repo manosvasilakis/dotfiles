@@ -79,6 +79,11 @@ alias \
 # Add settings to programs
 alias abook="abook -C\"$XDG_CONFIG_HOME\"/abook/abookrc --datafile\"$XDG_DATA_HOME\"/abook/addressbook"
 
+# Suffix Zsh Aliases
+alias -s {py,go,html,css,js,md,c,h,cpp}="nvim"
+# Global Aliases
+alias -g \
+	na="neoakintito"
 # Helper Functions
 ss() { find ~/.local ~/.config | fzf | xargs -r $EDITOR ; }
 vf() { fzf | xargs -r -I % $EDITOR % ; }
