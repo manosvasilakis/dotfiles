@@ -28,7 +28,7 @@ alias\
 	ccat="highlight --out-format=ansi"
 
 # Git Commands
-alias \
+alias\
 	init="echo '#' >> README.md && git init && git add ."\
 	addup="git add -u"\
 	addall="git add ."\
@@ -44,7 +44,7 @@ alias \
 	newtag="git tag -a"
 
 # Pacman Commands
-alias \
+alias\
 	p="pacman"\
 	sp="sudo pacman"\
 	checkcache="sudo ls /var/cache/pacman/pkg/"\
@@ -54,7 +54,7 @@ alias \
 	cleanorphans="sudo pacman -Qtdq | sudo pacman -Rns -"
 
 # Hard to type or just to long to type commands
-alias \
+alias\
 	ka="killall"\
 	g="git"\
 	sdn="sudo shutdown -h now"\
@@ -70,9 +70,7 @@ alias \
 	mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"\
 	mp3="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 5"\
 	htdocs="cd /opt/lampp/htdocs && ls"\
-	nazi="cd ~/.local/src/nazicode/dwm && l"\
-	opa="cd /home/manos/hell/ΟΠΑ/ΜΑΘΗΜΑΤΑ && l"\
-	opap="cd /opt/lampp/htdocs/www/opap && l"\
+	opa="cd ~/hell/ΟΠΑ/ΜΑΘΗΜΑΤΑ && l"\
 	updategrubconfig="sudo grub-mkconfig -o /boot/grub/grub.cfg"\
 	refreshdwmblocks="killall -q dwmblocks;setsid dwmblocks &"
 
@@ -83,8 +81,12 @@ alias abook="abook -C\"$XDG_CONFIG_HOME\"/abook/abookrc --datafile\"$XDG_DATA_HO
 alias -s {py,go,html,css,js,md,c,h,cpp}="nvim"
 
 # Global Aliases
-alias -g \
-	na="neoakintito"
+alias -g\
+	na="neoakintito"\
+	suckmore="~/.local/src/suckless/"\
+	classes="~/hell/ΟΠΑ/ΜΑΘΗΜΑΤΑ/"\
+	opapy="~/hell/ΟΠΑ/ΜΑΘΗΜΑΤΑ/ΕΠΗΥ/"\
+	opacs="~/hell/ΟΠΑ/ΜΑΘΗΜΑΤΑ/ΕΕΥ/"
 
 # Helper Functions
 ss() { find ~/.local ~/.config | fzf | xargs -r $EDITOR ; }
