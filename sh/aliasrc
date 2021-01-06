@@ -75,7 +75,7 @@ alias\
 	refreshdwmblocks="killall -q dwmblocks;setsid dwmblocks &"
 
 # Add settings to programs
-alias abook="abook -C\"$XDG_CONFIG_HOME\"/abook/abookrc --datafile\"$XDG_DATA_HOME\"/abook/addressbook"
+alias abook="abook -C \"$XDG_CONFIG_HOME\"/abook/abookrc --datafile \"$XDG_DATA_HOME\"/abook/addressbook"
 
 # Suffix Zsh Aliases
 alias -s {py,go,html,css,js,md,c,h,cpp}="nvim"

@@ -19,7 +19,8 @@ htop/
 mbsync/
 mimeapps.list
 msmtp/
-mutt/
+mutt/muttrc
+mutt/accounts/
 notmuch/
 npm/
 nvim/
