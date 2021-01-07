@@ -109,5 +109,16 @@ fi
 eval "$(starship init zsh)"
 # PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
-# Load syntax highlighting; should be last.
+# Load syntax highlighting; should be last. ?
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
+
+# Setup fzf
+if [[ ! "$PATH" == */home/manos/.local/share/fzf/bin* ]]; then
+  export PATH="${PATH:+${PATH}:}/home/manos/.local/share/fzf/bin"
+fi
+
+# Auto-completion
+[[ $- == *i* ]] && source "/home/manos/.local/share/fzf/shell/completion.zsh" 2> /dev/null
+
+# Key bindings
+source "/home/manos/.local/share/fzf/shell/key-bindings.zsh"
