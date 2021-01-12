@@ -1,3 +1,4 @@
+pulse/
 cmus/
 composer/
 gtk-2.0/gtkfilechooser.ini
@@ -19,6 +20,7 @@ htop/
 mbsync/
 mimeapps.list
 msmtp/
+mutt/.mailsynclastrun
 mutt/muttrc
 mutt/accounts/
 notmuch/

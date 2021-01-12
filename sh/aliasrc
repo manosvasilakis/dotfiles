@@ -58,7 +58,6 @@ alias\
 	ka="killall"\
 	g="git"\
 	sdn="sudo shutdown -h now"\
-	reboot="sudo reboot"\
 	f="$FILE"\
 	z="zathura"\
 	e="neomutt"\
