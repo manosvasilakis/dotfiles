@@ -62,7 +62,7 @@ alias\
 	f="$FILE"\
 	z="zathura"\
 	e="neomutt"\
-	E="mw -Y && e"\
+	E="mw -Y && pkill -RTMIN+9 dwmblocks && e"\
 	f="ranger"\
 	g="git"\
 	s="sxiv"\

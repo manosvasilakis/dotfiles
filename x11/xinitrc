@@ -9,5 +9,5 @@ export SSH_AUTH_SOCK
 
 while true
 do
-	dwm 2> /home/manos/.local/logs/dwm.log
+	ssh-agent dwm 2> /home/manos/.local/logs/dwm.log
 done
