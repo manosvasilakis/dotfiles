@@ -40,7 +40,7 @@ export SUDO_ASKPASS="$HOME/.local/bin/scripts/dmenuaskpass"
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
 export LESS=-R
 
-# [ ! -f ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ] && shortcuts > /dev/null 2>&1 &
+[ ! -f ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ] && shortcuts > /dev/null 2>&1 &
 
 # if pacman -Qs libxft-bgra > /dev/null 2>&1; then
 # 	# Start graphical server on user's current tty if not already running
