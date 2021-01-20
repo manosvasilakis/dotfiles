@@ -11,7 +11,7 @@ alias\
 alias\
 	cp="cp -iv"\
 	mv="mv -iv"\
-	rm="rm -vI"\
+	rm="trash"\
 	mkd="mkdir -pv"\
 	yt="youtube-dl --add-metadata -i"\
 	ffmpeg="ffmpeg -hide_banner"
@@ -29,52 +29,51 @@ alias\
 
 # Git Commands
 alias\
-	init="echo '#' >> README.md && git init && git add ."\
-	addup="git add -u"\
-	addall="git add ."\
-	branch="git branch"\
-	checkout="git checkout"\
-	clone="git clone"\
-	commit="git commit"\
-	fetch="git fetch"\
-	pull="git pull origin"\
-	push="git push origin"\
-	status="git status"\
-	tag="git tag"\
-	newtag="git tag -a"
+	g="git"\
+	init="echo '#' >> README.md && g init && g add ."\
+	addup="g add -u"\
+	addall="g add ."\
+	branch="g branch"\
+	checkout="g checkout"\
+	clone="g clone"\
+	commit="g commit"\
+	fetch="g fetch"\
+	pull="g pull origin"\
+	push="g push origin"\
+	status="g status"\
+	tag="g tag"\
+	newtag="g tag -a"
 
 # Pacman Commands
 alias\
 	p="pacman"\
-	sp="sudo pacman"\
+	sp="sudo p"\
 	checkcache="sudo ls /var/cache/pacman/pkg/"\
 	checkcachecount="sudo ls /var/cache/pacman/pkg/ | wc -l"\
 	checkcachedisksize="sudo du -sh /var/cache/pacman/pkg/"\
-	cleancache="sudo pacman -Scc"\
-	cleanorphans="sudo pacman -Qtdq | sudo pacman -Rns -"
+	cleancache="sp -Scc"\
+	cleanorphans="sp -Qtdq | sp -Rns -"
 
 # Hard to type or just to long to type commands
 alias\
+	k="kill"\
 	ka="killall"\
-	g="git"\
-	sdn="sudo shutdown -h now"\
 	f="$FILE"\
 	z="zathura"\
 	e="neomutt"\
-	E="mw -Y && pkill -RTMIN+9 dwmblocks && e"\
 	f="ranger"\
-	g="git"\
 	s="sxiv"\
 	S="sudo"\
-	mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"\
-	mp3="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 5"\
-	htdocs="cd /opt/lampp/htdocs && ls"\
-	opa="cd ~/hell/ΟΠΑ/ΜΑΘΗΜΑΤΑ && l"\
 	updategrubconfig="sudo grub-mkconfig -o /boot/grub/grub.cfg"\
-	refreshdwmblocks="killall -q dwmblocks;setsid dwmblocks &"
+	refreshdwmblocks="killall -q dwmblocks;setsid dwmblocks &"\
+	syncmails="mw -Y && pkill -RTMIN+9 dwmblocks && e"\
+	syncmonero="monerod --data-dir ~/hell/monero --prune-blockchain"
 
 # Add settings to programs
-alias abook="abook -C \"$XDG_CONFIG_HOME\"/abook/abookrc --datafile \"$XDG_DATA_HOME\"/abook/addressbook"
+alias\
+	abook="abook -C \"$XDG_CONFIG_HOME\"/abook/abookrc --datafile \"$XDG_DATA_HOME\"/abook/addressbook"\
+	mp3="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 5"\
+	mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
 
 # Suffix Zsh Aliases
 alias -s {py,go,html,css,js,md,c,h,cpp,tex}="nvim"
@@ -82,10 +81,13 @@ alias -s {py,go,html,css,js,md,c,h,cpp,tex}="nvim"
 # Global Aliases
 alias -g\
 	na="neoakintito"\
-	suckmore="~/.local/src/suckless/"\
-	classes="~/hell/ΟΠΑ/ΜΑΘΗΜΑΤΑ/"\
-	opapy="~/hell/ΟΠΑ/ΜΑΘΗΜΑΤΑ/ΕΠΗΥ/"\
-	opacs="~/hell/ΟΠΑ/ΜΑΘΗΜΑΤΑ/ΕΕΥ/"
+	suckmore="~/.local/src/suckless/ && l"\
+	classes="~/hell/ASOEE/classes/ && l"\
+	opa="~/hell/ASOEE && l"\
+	opapy="~/hell/ASOEE/classes/PROG/ && l"\
+	opacs="~/hell/ASOEE/classes/CS/ && l"\
+	opamath="~/hell/ASOEE/classes/MATH/ && l"\
+	htdocs="/opt/lampp/htdocs/ && l"
 
 # Helper Functions
 ss() { find ~/.local ~/.config | fzf | xargs -r $EDITOR ; }
