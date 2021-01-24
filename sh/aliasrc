@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# use neovim instead of vi and vim
-alias\
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias\
 	v="nvim"\
 	vi="nvim"\
 	vim="nvim"\
@@ -47,7 +47,7 @@ alias\
 # Pacman Commands
 alias\
 	p="pacman"\
-	sp="sudo p"\
+	sp="sudo pacman"\
 	checkcache="sudo ls /var/cache/pacman/pkg/"\
 	checkcachecount="sudo ls /var/cache/pacman/pkg/ | wc -l"\
 	checkcachedisksize="sudo du -sh /var/cache/pacman/pkg/"\
@@ -64,16 +64,20 @@ alias\
 	f="ranger"\
 	s="sxiv"\
 	S="sudo"\
+	updatefontcache="fc-cache -f -v"\
 	updategrubconfig="sudo grub-mkconfig -o /boot/grub/grub.cfg"\
 	refreshdwmblocks="killall -q dwmblocks;setsid dwmblocks &"\
+	hardrefreshdwmblocks="killall -q dwmblocks;rm -rf ~/.local/share/weatherreport ~/.local/share/crypto-prices;setsid dwmblocks &"\
 	syncmails="mw -Y && pkill -RTMIN+9 dwmblocks && e"\
-	syncmonero="monerod --data-dir ~/hell/monero --prune-blockchain"
 
 # Add settings to programs
 alias\
 	abook="abook -C \"$XDG_CONFIG_HOME\"/abook/abookrc --datafile \"$XDG_DATA_HOME\"/abook/addressbook"\
 	mp3="youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 5"\
-	mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
+	mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"\
+	monerod="monerod --data-dir /media/monero --bg-mining-enable"\
+	monero-wallet-cli="monero-wallet-cli --wallet-file /media/monero/nosmaney"\
+	shred="shred -ufvz -n 5"
 
 # Suffix Zsh Aliases
 alias -s {py,go,html,css,js,md,c,h,cpp,tex}="nvim"
