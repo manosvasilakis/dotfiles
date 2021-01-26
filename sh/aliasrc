@@ -48,6 +48,7 @@ alias\
 alias\
 	p="pacman"\
 	sp="sudo pacman"\
+	yay="paru"\
 	checkcache="sudo ls /var/cache/pacman/pkg/"\
 	checkcachecount="sudo ls /var/cache/pacman/pkg/ | wc -l"\
 	checkcachedisksize="sudo du -sh /var/cache/pacman/pkg/"\
@@ -96,4 +97,10 @@ alias -g\
 # Helper Functions
 ss() { find ~/.local ~/.config | fzf | xargs -r $EDITOR ; }
 vf() { fzf | xargs -r -I % $EDITOR % ; }
-compress_mp4() { ffmpeg -i $1 -vcodec libx265 -crf 28 $2 ; }
+compress_mp4()  { ffmpeg -i $1 -vcodec libx265 -crf 28 $2 ; }
+compress_zip()  { zip -r $1 $2}
+# compress_gzip() {}
+# compress_xz()   {}
+# compress_7z()   {}
+# compress_rar()  {}
+archive_tar()   { tar -cf $1 $2 ; }

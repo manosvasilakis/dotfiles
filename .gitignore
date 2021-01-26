@@ -27,7 +27,6 @@ libreoffice/
 mbsync/
 mimeapps.list
 msmtp/
-mutt/.mailsynclastrun
 mutt/accounts/
 mutt/muttrc
 notmuch/
