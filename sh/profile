@@ -36,6 +36,7 @@ export MBSYNCRC="$XDG_CONFIG_HOME/mbsync/mbsyncrc"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonstartup"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export _JAVA_AWT_WM_NONREPARENTING=1
+export VSCODE_PORTABLE="$XDG_DATA_HOME/vscode"
 
 # Other program settings:
 export SUDO_ASKPASS="$HOME/.local/bin/scripts/dmenuaskpass"
