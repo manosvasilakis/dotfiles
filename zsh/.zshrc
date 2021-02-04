@@ -1,4 +1,4 @@
-# Nosma config for the Z shell
+# Nosma config for the Z shell!
 
 # Colors & Prompt
 autoload -U colors && colors 	# Load colors
