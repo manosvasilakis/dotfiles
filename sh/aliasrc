@@ -70,6 +70,7 @@ alias\
 	refreshdwmblocks="killall -q dwmblocks;setsid dwmblocks &"\
 	hardrefreshdwmblocks="killall -q dwmblocks;rm -rf ~/.local/share/weatherreport ~/.local/share/crypto-prices;setsid dwmblocks &"\
 	syncmails="mw -Y && pkill -RTMIN+9 dwmblocks && e"\
+	power_stats="sudo tlp-stat"
 
 # Add settings to programs
 alias\
@@ -89,18 +90,15 @@ alias -g\
 	suckmore="~/.local/src/suckless/ && l"\
 	classes="~/hell/ASOEE/classes/ && l"\
 	opa="~/hell/ASOEE && l"\
-	opapy="~/hell/ASOEE/classes/PROG/ && l"\
-	opacs="~/hell/ASOEE/classes/CS/ && l"\
-	opamath="~/hell/ASOEE/classes/MATH/ && l"\
 	htdocs="/opt/lampp/htdocs/ && l"
 
 # Helper Functions
 ss() { find ~/.local ~/.config | fzf | xargs -r $EDITOR ; }
 vf() { fzf | xargs -r -I % $EDITOR % ; }
-compress_mp4()  { ffmpeg -i $1 -vcodec libx265 -crf 28 $2 ; }
-compress_zip()  { zip -r $1 $2}
-# compress_gzip() {}
-# compress_xz()   {}
-# compress_7z()   {}
-# compress_rar()  {}
-archive_tar()   { tar -cf $1 $2 ; }
+cs_mp4()  { ffmpeg -i $1 -vcodec libx265 -crf 28 $2 ; }
+cs_zip()  { zip -r $1 $2}
+# cs_gzip() {}
+# cs_xz()   {}
+# cs_7z()   {}
+# cs_rar()  {}
+a_tar()   { tar -cf $1 $2 ; }

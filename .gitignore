@@ -1,4 +1,5 @@
 .mono/
+blender/
 JetBrains/
 BraveSoftware/
 GIMP/
@@ -33,7 +34,7 @@ notmuch/
 npm/
 nvim/
 pam-gnupg
-pulse/
+pulse/cookie
 python/
 qBittorrent/
 ranger/plugins/
