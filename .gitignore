@@ -35,6 +35,9 @@ npm/
 nvim/
 pam-gnupg
 pulse/cookie
+pulse/*.tdb
+pulse/bd1eaf607037efe3b858727e5fe0a4c1-default-sink
+pulse/bd1eaf607037efe3b858727e5fe0a4c1-default-source
 python/
 qBittorrent/
 ranger/plugins/
