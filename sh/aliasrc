@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias\
@@ -55,6 +55,12 @@ alias\
 	cleancache="sp -Scc"\
 	cleanorphans="sp -Qtdq | sp -Rns -"
 
+# cmd trash Commands
+alias\
+	te="trash-empty"\
+	tl="trash-list"\
+	tR="trash-restore"
+
 # Hard to type or just to long to type commands
 alias\
 	k="kill"\
@@ -102,3 +108,4 @@ cs_zip()  { zip -r $1 $2}
 # cs_7z()   {}
 # cs_rar()  {}
 a_tar()   { tar -cf $1 $2 ; }
+crop_to_content() { convert $1 -flatten -fuzz 1% -trim +repage $2 ; }
