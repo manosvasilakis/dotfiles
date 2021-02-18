@@ -11,7 +11,6 @@
 alias\
 	cp="cp -iv"\
 	mv="mv -iv"\
-	rm="trash"\
 	mkd="mkdir -pv"\
 	yt="youtube-dl --add-metadata -i"\
 	ffmpeg="ffmpeg -hide_banner"
@@ -57,9 +56,12 @@ alias\
 
 # cmd trash Commands
 alias\
+	Rm="rm"\
+	RM="rm -rf"\
+	rm="trash"
 	te="trash-empty"\
 	tl="trash-list"\
-	tR="trash-restore"
+	tR="trash-restore"\
 
 # Hard to type or just to long to type commands
 alias\

@@ -6,7 +6,6 @@
 export PATH="$PATH:/home/manos/.local/bin:/home/manos/.local/bin/scripts:/home/manos/.local/bin/scripts/statusbar:/home/manos/.local/bin/scripts/cron:/opt/texlive/2021/bin/x86_64-linux:/opt/lampp:/opt/lampp/bin/"
 export MANPATH="$MANPATH:/opt/texlive/2021/texmf-dist/doc/man"
 export INFOPATH="$INFOPATH:/opt/texlive/2021/texmf-dist/doc/info"
-export PATH="$PATH:/home/manos/.emacs.d/bin" # Does it worth the trouble ?
 
 # Default Programs:
 export EDITOR="nvim"

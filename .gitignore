@@ -33,6 +33,7 @@ mimeapps.list
 msmtp/
 mutt/accounts/
 mutt/muttrc
+newsboat/urls
 notmuch/
 npm/
 nvim/
