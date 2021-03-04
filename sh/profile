@@ -41,6 +41,8 @@ export VSCODE_PORTABLE="$XDG_DATA_HOME/vscode"
 export SUDO_ASKPASS="$HOME/.local/bin/scripts/dmenuaskpass"
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
 export LESS=-R
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# export MANPAGER="nvim -c 'set ft=man' -"
 
 [ ! -f ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ] && shortcuts > /dev/null 2>&1 &
 
@@ -55,7 +57,8 @@ export LESS=-R
 # fi
 
 # Switch escape and caps if tty and no passwd required.
-# sudo -n loadkeys $HOME/.local/share/ttymaps.kmap 2>/dev/null
+sudo -n loadkeys $HOME/.local/share/ttymaps.kmap 2>/dev/null
+# Start Xorg and dwm
 if [ -z "${DISPLAY}" ] && [ ${XDG_VTNR} -eq 1 ]; then
 	exec startx "$XINITRC"
 fi
