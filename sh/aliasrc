@@ -58,10 +58,10 @@ alias\
 alias\
 	Rm="rm"\
 	RM="rm -rf"\
-	rm="trash"
+	rm="trash"\
 	te="trash-empty"\
 	tl="trash-list"\
-	tR="trash-restore"\
+	tR="trash-restore"
 
 # Hard to type or just to long to type commands
 alias\
@@ -73,11 +73,14 @@ alias\
 	f="ranger"\
 	s="sxiv"\
 	S="sudo"\
+	cntd="exa -1 . | wc -l"\
+	cntD="exa -1 -a . | wc -l"\
 	updatefontcache="fc-cache -f -v"\
 	updategrubconfig="sudo grub-mkconfig -o /boot/grub/grub.cfg"\
 	refreshdwmblocks="killall -q dwmblocks;setsid dwmblocks &"\
 	hardrefreshdwmblocks="killall -q dwmblocks;rm -rf ~/.local/share/weatherreport ~/.local/share/crypto-prices;setsid dwmblocks &"\
 	syncmails="mw -Y && pkill -RTMIN+9 dwmblocks && e"\
+	news="newsboat && pkill -RTMIN+16 dwmblocks"\
 	power_stats="sudo tlp-stat"
 
 # Add settings to programs
