@@ -1,7 +1,7 @@
 [global]
     monitor = 0
     follow = keyboard
-    geometry = "350x5-0+24"
+    geometry = "350x5-0+16"
     indicate_hidden = yes
     shrink = yes
     transparency = 20
@@ -111,9 +111,9 @@
 # NOTE: It might be helpful to run dunst -print in a terminal in order
 # to find fitting options for rules.
 
-#[espeak]
-#    summary = "*"
-#    script = dunst_espeak.sh
+[espeak]
+    summary = "*"
+    script = dunstsoundalert
 
 #[script-test]
 #    summary = "*script*"
