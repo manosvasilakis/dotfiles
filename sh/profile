@@ -3,7 +3,7 @@
 # profile file, runs on login. Env vars are set here.
 
 # Add ~/.local/bin to $PATH
-export PATH="$PATH:/home/manos/.local/bin:/home/manos/.local/bin/scripts:/home/manos/.local/bin/scripts/statusbar:/home/manos/.local/bin/scripts/cron:/opt/texlive/2021/bin/x86_64-linux:/opt/lampp:/opt/lampp/bin/"
+export PATH="$PATH:/home/manos/.local/bin:/home/manos/.local/bin/scripts:/home/manos/.local/bin/scripts/cron:/home/manos/.local/bin/scripts/dmenu:/home/manos/.local/bin/scripts/statusbar:/opt/texlive/2021/bin/x86_64-linux:/opt/lampp:/opt/lampp/bin/:/home/manos/.local/bin/intelFPGA_lite/19.1/quartus/bin/"
 export MANPATH="$MANPATH:/opt/texlive/2021/texmf-dist/doc/man"
 export INFOPATH="$INFOPATH:/opt/texlive/2021/texmf-dist/doc/info"
 
@@ -44,7 +44,7 @@ export LESS=-R
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # export MANPAGER="nvim -c 'set ft=man' -"
 
-[ ! -f ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ] && shortcuts > /dev/null 2>&1 &
+# [ ! -f ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ] && shortcuts > /dev/null 2>&1 &
 
 # if pacman -Qs libxft-bgra > /dev/null 2>&1; then
 # 	# Start graphical server on user's current tty if not already running
