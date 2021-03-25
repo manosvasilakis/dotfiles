@@ -104,13 +104,14 @@ alias -g\
 	htdocs="/opt/lampp/htdocs/ && l"
 
 # Helper Functions
-ss() { find ~/.local ~/.config | fzf | xargs -r $EDITOR ; }
+ss() { find ~/.local/bin/scripts/ ~/.local/share/ ~/.config | fzf | xargs -r $EDITOR ; }
 vf() { fzf | xargs -r -I % $EDITOR % ; }
 cs_mp4()  { ffmpeg -i $1 -vcodec libx265 -crf 28 $2 ; }
-cs_zip()  { zip -r $1 $2}
+cs_zip()  { zip -r "$1.zip" $1}
 # cs_gzip() {}
 # cs_xz()   {}
 # cs_7z()   {}
 # cs_rar()  {}
 a_tar()   { tar -cf $1 $2 ; }
 crop_to_content() { convert $1 -flatten -fuzz 1% -trim +repage $2 ; }
+gen_passwd() { gpg --gen-random --armor 1 "${1:-12}" ; }
