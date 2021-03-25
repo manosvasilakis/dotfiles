@@ -38,7 +38,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export VSCODE_PORTABLE="$XDG_DATA_HOME/vscode"
 
 # Other program settings:
-export SUDO_ASKPASS="$HOME/.local/bin/scripts/dmenuaskpass"
+export SUDO_ASKPASS="$HOME/.local/bin/scripts/dmenu/dmenuaskpass"
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
 export LESS=-R
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
