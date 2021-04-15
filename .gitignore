@@ -24,6 +24,7 @@ coc/
 composer/
 configstore/
 dconf/
+discord/
 filezilla/
 freerdp/
 gtk-2.0/gtkfilechooser.ini
