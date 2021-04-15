@@ -81,7 +81,8 @@ alias\
 	hardrefreshdwmblocks="killall -q dwmblocks;rm -rf ~/.local/share/weatherreport ~/.local/share/crypto-prices;setsid dwmblocks &"\
 	syncmails="mw -Y && pkill -RTMIN+9 dwmblocks && e"\
 	news="newsboat && pkill -RTMIN+16 dwmblocks"\
-	power_stats="sudo tlp-stat"
+	power_stats="sudo tlp-stat"\
+	datestamp="date '+%F'"
 
 # Add settings to programs
 alias\
@@ -104,14 +105,19 @@ alias -g\
 	htdocs="/opt/lampp/htdocs/ && l"
 
 # Helper Functions
-ss() { find ~/.local/bin/scripts/ ~/.local/share/ ~/.config | fzf | xargs -r $EDITOR ; }
-vf() { fzf | xargs -r -I % $EDITOR % ; }
-cs_mp4()  { ffmpeg -i $1 -vcodec libx265 -crf 28 $2 ; }
-cs_zip()  { zip -r "$1.zip" $1}
+ss() { find ~/.local/bin/scripts/ ~/.local/share/ ~/.config | fzf | xargs -r $EDITOR }
+vf() { fzf | xargs -r -I % $EDITOR % }
+x+()  { chmod +x $1 }
+x-()  { chmod -x $1 }
+cs_mp4()  { ffmpeg -i $1 -vcodec libx265 -crf 28 $2 }
+cs_zip()  { zip -r "$1.zip" $1 }
 # cs_gzip() {}
 # cs_xz()   {}
 # cs_7z()   {}
 # cs_rar()  {}
-a_tar()   { tar -cf $1 $2 ; }
-crop_to_content() { convert $1 -flatten -fuzz 1% -trim +repage $2 ; }
-gen_passwd() { gpg --gen-random --armor 1 "${1:-12}" ; }
+a_tar()   { tar -cf $1 $2 }
+crop_to_content() { convert $1 -flatten -fuzz 1% -trim +repage $2 }
+gen_passwd() { gpg --gen-random --armor 1 "${1:-12}" }
+basehdd() { (lsblk -f > /dev/null 2>&1 | grep 'ad096952-5bfc-4d02-bdbe-184b31ce632b'>/dev/null 2>&1) && (df -h >/dev/null 2>&1 | grep 'basehdd'>/dev/null 2>&1 && (sudo umount /media/basehdd && notify-send 'basehdd umounted.') || (sudo mount --uuid 'ad096952-5bfc-4d02-bdbe-184b31ce632b' /media/basehdd && notify-send 'basehdd mounted.')) }
+# To force a rescan on a SCSI BUS (each SATA port shows as a SCSI BUS) and find new drives, you will use
+scsi_bus_rescan() { sudo echo "0 0 0" > /sys/class/scsi_host/host[0-5]/scan } # If your SATA controller supports hot swap, it should "just work(tm)."
